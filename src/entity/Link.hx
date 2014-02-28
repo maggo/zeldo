@@ -11,8 +11,8 @@ class Link extends FlxSprite
 	public function new() {
 		super();
 
-		x = 80;
-		y = 80;
+		this.x = 80;
+		this.y = 80;
 
 		this.loadGraphic("assets/link_sprite.png", true, false, 16, 16);
 		this.animation.add("walk_left", [0, 1], 4, true);
