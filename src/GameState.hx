@@ -1,16 +1,28 @@
 package;
 
 import entity.Link;
+import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import map.OverworldMap;
 
 class GameState extends FlxState {
+	var player:Link;
+	var map:OverworldMap;
+
     override public function create():Void {
         trace("state created");
-        var bg:FlxSprite = new FlxSprite(0,0,"assets/background.png");
-        add(bg);
+
+       	map = new OverworldMap();
+        this.add(map);
         
-        var link:Link = new Link();
-        this.add(link);
+        player = new Link();
+        this.add(player);
+    }
+
+    override public function update() {
+    	super.update();
+    	
+    	FlxG.collide(player, map);
     }
 }
