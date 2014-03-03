@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-	<meta title="Zeldo" package="com.example.zeldo" version="1.0.0" company="Company Name" />
-	<app main="Main" path="bin" file="Zeldo" />
-	<window width="480" height="384" orientation="landscape" fps="60" background="0xFFFFFF" resizable="false" borderless="false" fullscreen="false" antialiasing="0" />
-	
-	
-	<source path="src" />
-	
-	<haxelib name="openfl" />
-	<haxelib name="flixel" />
+    <meta title="Zeldo" package="com.example.zeldo" version="1.0.0" company="Company Name" />
+    <app main="Main" path="bin" file="Zeldo" />
+    <window width="480" height="384" orientation="landscape" fps="60" background="0xFFFFFF" resizable="false" borderless="false" fullscreen="false" antialiasing="0" />
+    
+    <source path="src" />
+    
+    <haxelib name="openfl" version="1.2.2" />
+    <haxelib name="flixel" version="3.2.1" />
 
-	<assets path="assets" rename="assets" exclude="openfl.svg" />
-	<icon path="assets/openfl.svg" />
-	
+    <assets path="assets" rename="assets" exclude="openfl.svg" />
+    <icon path="assets/openfl.svg" />
 </project>
