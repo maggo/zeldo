@@ -33,31 +33,31 @@ class Link extends FlxSprite
 	override public function update() {
 		this.velocity = new FlxPoint(0,0);
 
-		if(FlxG.keyboard.pressed("UP")) {
+		if(FlxG.keys.pressed.UP) {
 			this.velocity.y = -LINK_SPEED;
 			this.facing = FlxObject.UP;
 			this.animation.play("walk_up");
 		}
 
-		if(FlxG.keyboard.pressed("DOWN")) {
+		if(FlxG.keys.pressed.DOWN) {
 			this.velocity.y = LINK_SPEED;
 			this.facing = FlxObject.DOWN;
 			this.animation.play("walk_down");
 		}
 
-		if(FlxG.keyboard.pressed("LEFT")) {
+		if(FlxG.keys.pressed.LEFT) {
 			this.velocity.x = -LINK_SPEED;
 			this.facing = FlxObject.LEFT;
 			this.animation.play("walk_left");
 		}
 
-		if(FlxG.keyboard.pressed("RIGHT")) {
+		if(FlxG.keys.pressed.RIGHT) {
 			this.velocity.x = LINK_SPEED;
 			this.facing = FlxObject.RIGHT;
 			this.animation.play("walk_right");
 		}
 
-		if(!FlxG.keyboard.pressed("UP", "DOWN", "LEFT", "RIGHT")) {
+		if(!FlxG.keys.anyPressed(["UP", "DOWN", "LEFT", "RIGHT"])) {
 			this.animation.pause();
 		}
 
